@@ -1,4 +1,4 @@
-# Welcome to your Expo app 👋
+# Welcome to Peace-AI app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
@@ -16,36 +16,29 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
     npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+# 🧠 Peace - PDF QA System with FastAPI
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+A simple FastAPI-based  front-end backend code for uploading PDF files and asking questions based on their content using transformer models.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## 1. Set Up Environment - Backend
 
-When you're ready, run:
+Open a terminal in the project directory.
+
+Create and activate a virtual environment (recommended):
 
 ```bash
-npm run reset-project
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install fastapi uvicorn python-dotenv faiss-cpu sentence-transformers requests pymupdf transformers tiktoken
+pip install -r requirements.txt
+GROQ_API_KEY=your_actual_groq_key_here
+uvicorn main:app --reload
 ```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-# Peace-AI
+## 2. Set Up Environment - FrontEND
+Install React and Expo
+```bash
+npx expo start
+```
+Then choose your platform to run.
